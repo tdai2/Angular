@@ -10,13 +10,13 @@ import {AuthService} from '../core/auth.service'
     <button (click)="clickLogin(usernameRef.value,passwordRef.value)"> Login </button>
     </div>
   `,
-  styles: []
+  styles: [],
+  providers:[AuthService]
 })
 
 export class LoginComponent implements OnInit {
-  service :AuthService ;
-  constructor() {
-    this.service = new AuthService();
+  //service :AuthService ;
+  constructor(private service:AuthService) {
 
    }
   ngOnInit() {
