@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {AuthService} from '../core/auth.service'
+import { Component, OnInit, Inject } from '@angular/core';
+//import {AuthService} from '../core/auth.service'
 
 @Component({
   selector: 'app-login',
@@ -11,12 +11,12 @@ import {AuthService} from '../core/auth.service'
     </div>
   `,
   styles: [],
-  providers:[AuthService]
+  providers:[]
 })
 
 export class LoginComponent implements OnInit {
   //service :AuthService ;
-  constructor(private service:AuthService) {
+  constructor(@Inject('auth') private service) {
 
    }
   ngOnInit() {
