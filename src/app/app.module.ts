@@ -20,7 +20,7 @@ import {InMemoryTodoDbService} from './todo/todo-data';
   declarations: [
     AppComponent,
     LoginComponent,
-    TodoComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
