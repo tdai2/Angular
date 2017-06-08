@@ -6,6 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {AuthService} from './core/auth.service';
+//import {RouterModule} from '@angular/router';
+import {routing} from './app.routes';
+import { TodoComponent } from './todo/todo.component';
+import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {InMemoryTodoDbService} from './todo/todo-data';
+
+
 
 
 
@@ -13,13 +20,29 @@ import {AuthService} from './core/auth.service';
   declarations: [
     AppComponent,
     LoginComponent,
-
+    TodoComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
+    routing
+/*
+    RouterModule.forRoot([
+      {
+        path:'',
+        redirectTo: 'login',
+        pathMatch: 'full'
+      },
+      {
+        path : 'login',
+        component: LoginComponent
+      }
+    ])
+  */
   ],
+
   providers: [
     {provide:'auth', useClass: AuthService}
     ],
