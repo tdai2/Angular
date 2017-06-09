@@ -9,7 +9,8 @@ import {Todo} from './todo.model';
 
 @Injectable()
 export class TodoService {
-  private api_url= 'api/todos';
+//  private api_url= 'api/todos';
+  private api_url= 'http://localhost:3000/todos';
   private headers = new Headers({'Content-Type': 'application/json'});
 
 
@@ -24,7 +25,7 @@ export class TodoService {
     return this.http
     .post(this.api_url,JSON.stringify(todo),{headers: this.headers})
     .toPromise()
-    .then(res => res.json(). data as Todo)
+    .then(res => res.json() as Todo)
     .catch(this.handleError);
   }
   // PUT /todos/:id
@@ -53,7 +54,7 @@ export class TodoService {
   getTodos(): Promise<Todo[]>{
     return this.http.get(this.api_url)
       .toPromise()
-      .then(res => res.json(). data as Todo[])
+      .then(res => res.json() as Todo[])
       .catch(this.handleError);
   }
 

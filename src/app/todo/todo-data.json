@@ -1,0 +1,54 @@
+{
+  "todos": [
+    {
+      "id": "f823b191-7799-438d-8d78-fcble468fc78",
+      "desc": "Getting up",
+      "completed": true
+    },
+    {
+      "id": "c316a3bf-b053-71f9-18a3-0073c7ee3b76",
+      "desc": "Go to school",
+      "completed": true
+    },
+    {
+      "id": "f823b191-7799-438d-8d78-fcb1e468fc78",
+      "desc": "blablabla",
+      "completed": true
+    },
+    {
+      "id": "6f53f8e0-c690-ddc0-e06f-7a290548062d",
+      "desc": "what",
+      "completed": false
+    },
+    {
+      "id": "eba9827b-1053-3dc2-d783-a2ae9d427ee3",
+      "desc": "",
+      "completed": false
+    },
+    {
+      "id": "7e655374-44ee-b214-62dc-4aac75f9697f",
+      "desc": "jkfd",
+      "completed": true
+    },
+    {
+      "id": "ae387e6a-5a22-494b-16f0-73f27617ed9e",
+      "desc": "jkfds",
+      "completed": false
+    },
+    {
+      "id": "54d6f121-9e93-9516-eb52-5e89df74fccf",
+      "desc": "kflsda",
+      "completed": true
+    },
+    {
+      "id": "b007e26e-a4cf-96a6-9995-6e940229f310",
+      "desc": "",
+      "completed": false
+    },
+    {
+      "id": "0c3e892c-099d-19a8-f9bc-d6f2857515fb",
+      "desc": "ffdsafds",
+      "completed": false
+    }
+  ]
+}
