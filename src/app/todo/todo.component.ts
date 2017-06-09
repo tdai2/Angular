@@ -59,5 +59,8 @@ export class TodoComponent implements OnInit {
       todos => this.todos = [... todos
       ]);
   }
+  onTextChanges(value) {
+    this.desc = value;
+  }
 
 }
