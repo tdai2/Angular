@@ -12,7 +12,7 @@ export class TodoListComponent {
   set todos(todos:Todo[]){
     this._todos = [... todos];
   }
-
+k
   get todos(){
     return this._todos;
   }

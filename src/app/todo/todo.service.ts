@@ -49,6 +49,24 @@ export class TodoService {
       .then(() => null)
       .catch(this.handleError);
   }
+  // GET /todos?completed=true/false
+  filterTodos(filter:string): Promise<Todo[]>{
+    switch(filter){
+      case 'ACTIVE': return this.http
+            .get(`${this.api_url}?completed=false`)
+            .toPromise()
+            .then(res => res.json() as Todo[])
+            .catch(this.handleError);
+      case 'COMPLETED': return this.http
+            .get(`${this.api_url}?completed=true`)
+            .toPromise()
+            .then(res => res.json() as Todo[])
+            .catch(this.handleError);
+      default:
+            return this.getTodos();
+    }
+  }
+
 
   //Get /todos
   getTodos(): Promise<Todo[]>{
