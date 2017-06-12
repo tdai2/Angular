@@ -13,11 +13,11 @@ export class TodoItemComponent {
   @Output() onToggleTriggered = new EventEmitter<boolean>();
   @Output() onRemoveTriggered = new EventEmitter<boolean>();
 
-  toggle(){
+  toggleTodo(){
     this.onToggleTriggered.emit(true);
   }
 
-  remove(){
+  removeTodo(){
     this.onRemoveTriggered.emit(true)
   }
 

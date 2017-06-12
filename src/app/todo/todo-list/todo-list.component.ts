@@ -9,6 +9,7 @@ import {Todo} from '../todo.model';
 export class TodoListComponent {
   _todos: Todo[] = [];
   @Input()
+
   set todos(todos:Todo[]){
     this._todos = [... todos];
   }
@@ -26,5 +27,10 @@ k
 
   onToggleTriggered(todo:Todo){
     this.onToggleTodo.emit(todo);
+  }
+
+  @Output() onToggleAll = new EventEmitter<boolean>();
+  onToggleAllTriggered(){
+    this.onToggleAll.emit(true);
   }
 }

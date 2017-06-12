@@ -79,5 +79,12 @@ export class TodoComponent implements OnInit {
   onTextChanges(value) {
     this.desc = value;
   }
+  toggleAll(){
+    this.todos.forEach(todo => this.toggleTodo(todo));
+  }
 
+  clearCompleted(){
+    const todos = this.todos.filter(todo => todo.completed===true);
+    todos.forEach (todo => this.removeTodo(todo));
+  }
 }
