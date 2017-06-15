@@ -3,3 +3,10 @@ export class Todo {
     desc: string;
     completed: boolean;
 }
+
+export class User {
+    uname:string;
+    upassword:string;
+    uId:string;
+    uPrivilege:string;
+}

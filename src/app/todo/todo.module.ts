@@ -11,6 +11,9 @@ import {TodoFooterComponent} from './todo-footer/todo-footer.component';
 import {TodoService} from './todo.service';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { DataCenterComponent } from './data-center/data-center.component';
+import { UserItemComponent } from './user-item/user-item.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { TodoListComponent } from './todo-list/todo-list.component';
         TodoFooterComponent,
         TodoHeaderComponent,
         TodoItemComponent,
-        TodoListComponent
+        TodoListComponent,
+        DataCenterComponent,
+        UserItemComponent,
+        UserListComponent
     ],
     providers:[
         {provide: 'todoService', useClass: TodoService}

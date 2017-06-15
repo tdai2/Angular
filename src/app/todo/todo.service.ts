@@ -6,11 +6,15 @@ import 'rxjs/add/operator/toPromise';
 
 import {Todo} from './todo.model';
 
+import {User} from './todo.model';
+
 
 @Injectable()
 export class TodoService {
 //  private api_url= 'api/todos';
-  private api_url= 'http://localhost:3000/todos';
+  private api_url = "http://localhost:3000/todos"
+  private DataCenter_api_url= 'http://localhost:5000/api/user';
+
   private headers = new Headers({'Content-Type': 'application/json'});
 
 
@@ -73,6 +77,15 @@ export class TodoService {
     return this.http.get(this.api_url)
       .toPromise()
       .then(res => res.json() as Todo[])
+      .catch(this.handleError);
+  }
+
+  
+
+  getUsers(): Promise<User[]>{
+    return this.http.get(this.DataCenter_api_url)
+      .toPromise()
+      .then(res => res.json() as User[])
       .catch(this.handleError);
   }
 

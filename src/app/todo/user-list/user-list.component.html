@@ -1,0 +1,8 @@
+<ul class="todo-list">
+    <li> User name</li>
+    <li *ngFor="let user of users">
+      <app-user-item
+      [userName] = "user.uname">
+      </app-user-item>
+    </li>
+  </ul>

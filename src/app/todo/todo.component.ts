@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {Todo} from './todo.model';
+import {User} from './todo.model';
 import {TodoService} from './todo.service';
 import {Router,ActivatedRoute, Params} from '@angular/router';
 
@@ -12,7 +13,9 @@ import {Router,ActivatedRoute, Params} from '@angular/router';
 })
 export class TodoComponent implements OnInit {
   todos: Todo[] = [];
+  users: User[] = [];
   desc: string = '';
+  userName: string = '';
 
   constructor(@Inject('todoService') private service:TodoService,
               private route: ActivatedRoute,
@@ -23,7 +26,9 @@ export class TodoComponent implements OnInit {
     this.route.params.forEach((params: Params)=>{
       let filter = params['filter'];
       this.filterTodos(filter);
+      this.getUsers();
     });
+    
 
   }
   
@@ -78,6 +83,10 @@ export class TodoComponent implements OnInit {
       ]);
   }
   */
+  getUsers(): void{
+    this.service.
+    getUsers().then(users=> this.users = [... users]);
+  }
   onTextChanges(value) {
     this.desc = value;
   }
