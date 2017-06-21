@@ -38,7 +38,7 @@ onSubmit(formValue){
       this.auth = Object.assign({}, auth);
     }
   });
-  console.log(('auth result is:'+this.service.loginWithCredentials(formValue.login.username, formValue.lgoin.password)));
+  console.log(('auth result is:'+this.service.loginWithCredentials(formValue.login.username, formValue.login.password)));
 }
 clearUsername(){this.username = ''} 
 clearPassword(){this.password = ''} 

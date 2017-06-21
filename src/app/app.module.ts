@@ -16,8 +16,6 @@ import {routing} from './app.routes';
 import {TodoModule} from './todo/todo.module';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

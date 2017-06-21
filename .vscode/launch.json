@@ -4,18 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
      "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "Launch Chrome against localhost, with sourcemaps",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:4200",
-            "sourceMaps": true,
+            "url": "http://localhost:4200/todo",
+            "sourceMaps": false,
             "runtimeArgs": [
                 "--disable-session-crashed-bubble",
                 "--disable-infobars"
             ],
             "diagnosticLogging": true,
-            "webRoot": "${workspaceRoot}/src",
+            "webRoot": "${workspaceRoot}",
             //windows setup
             "userDataDir": "C:\\temp\\chromeDummyDir",
             "sourceMapPathOverrides": {

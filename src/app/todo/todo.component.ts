@@ -15,6 +15,7 @@ export class TodoComponent implements OnInit {
   desc: string = '';
 
   constructor(@Inject('todoService') private service:TodoService,
+              @Inject('')
               private route: ActivatedRoute,
               private router: Router
               ) { }
