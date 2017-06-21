@@ -34,8 +34,7 @@ onSubmit(formValue){
       localStorage.removeItem('redirectUrl');}
     else{
       this.auth = Object.assign({}, auth);}
-  }).catch(
-    console.log("authfail"))
+  })
   
   console.log(('auth result is:'+this.service.loginWithCredentials(formValue.login.username, formValue.login.password)));
 }

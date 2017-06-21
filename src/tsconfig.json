@@ -5,14 +5,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": ["es6", "dom"],
-    "mapRoot": "./",
+    "mapRoot": "compiled",
     "module": "es6",
     "moduleResolution": "node",
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
-    "target": "es5",
+    "target": "es6",
     "typeRoots": [
       "../node_modules/@types"
-    ]
+    ],
+    "outFile": "${workspaceRoot}/compiled/**/*.js"
   }
 }
