@@ -27,17 +27,16 @@ export class LoginComponent implements OnInit {
 //clickLogin(username,password) {console.log('login username is:'+username+"\nlogin password is:"+password);}
 //clickLogin() {console.log('auth result is:'+this.service.loginWithCredentials(this.username,this.password));}
 onSubmit(formValue){
-  this.service.loginWithCredentials(formValue.login.username, formValue.login.password)
-  .then(auth => {
+  this.service.loginWithCredentials(formValue.login.username, formValue.login.password).then(auth => {
     let redirectUrl = (auth.redirectUrl === null)?'/':auth.redirectUrl;
     if(!auth.hasError){
       this.router.navigate([redirectUrl]);
-      localStorage.removeItem('redirectUrl');
-    }
+      localStorage.removeItem('redirectUrl');}
     else{
-      this.auth = Object.assign({}, auth);
-    }
-  });
+      this.auth = Object.assign({}, auth);}
+  }).catch(
+    console.log("authfail"))
+  
   console.log(('auth result is:'+this.service.loginWithCredentials(formValue.login.username, formValue.login.password)));
 }
 clearUsername(){this.username = ''} 

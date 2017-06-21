@@ -16,7 +16,8 @@ export class AuthGuardService implements CanActivate {
   }
 
   checkLogin(url:string) : boolean{
-    console.log("-----------------------------------------------------");
+    //console.log("-----------------------------------------------------");
+    //console.log(localStorage.getItem('userId'));
     if(localStorage.getItem('userId')!==null){return true;}
     localStorage.setItem('redirectUrl', url);
     this.router.navigate(['/login']);

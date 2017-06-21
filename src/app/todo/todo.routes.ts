@@ -7,8 +7,9 @@ export const routes: Routes = [
    // component: TodoComponent},
     {path:'todo/:filter',
     canActivate:[AuthGuardService],
-    component: TodoComponent,
-    }
+    component: TodoComponent,}
+
+
 ];
 
 export const routing = RouterModule.forChild(routes);

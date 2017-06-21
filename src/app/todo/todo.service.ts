@@ -56,7 +56,7 @@ export class TodoService {
     const userId:number = +localStorage.getItem('userId');
     switch(filter){
       case 'ACTIVE': return this.http
-            .get(`${this.api_url}?completed=false&userId = ${userId}`)
+            .get(`${this.api_url}?completed=false&userId=${userId}`)
             .toPromise()
             .then(res => res.json() as Todo[])
             .catch(this.handleError);
