@@ -14,7 +14,7 @@ import{UserService} from './core/user.service'
 import {AppRoutingModule} from './app-routing.module';
 
 import {TodoModule} from './todo/todo.module';
-
+//import {PlaygroundModule} from './playground/playground.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,9 @@ import {TodoModule} from './todo/todo.module';
     HttpModule,
   //  InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     AppRoutingModule,
-    TodoModule
+    TodoModule,
+  //  PlaygroundModule
+
 /*
     RouterModule.forRoot([
       {
