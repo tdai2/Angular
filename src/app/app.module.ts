@@ -11,7 +11,7 @@ import { LoginComponent } from './login/login.component';
 import {AuthService} from './core/auth.service';
 import{UserService} from './core/user.service'
 //import {RouterModule} from '@angular/router';
-import {routing} from './app.routes';
+import {AppRoutingModule} from './app-routing.module';
 
 import {TodoModule} from './todo/todo.module';
 
@@ -26,7 +26,7 @@ import {TodoModule} from './todo/todo.module';
     FormsModule,
     HttpModule,
   //  InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
-    routing,
+    AppRoutingModule,
     TodoModule
 /*
     RouterModule.forRoot([

@@ -1,15 +1,19 @@
 import {Routes, RouterModule} from '@angular/router';
+import {NgModule} from '@angular/core';
 import {TodoComponent} from './todo.component';
 import {AuthGuardService} from '../core/auth-guard.service';
 
-export const routes: Routes = [
+const routes: Routes = [
    // {path:'todo',
    // component: TodoComponent},
     {path:'todo/:filter',
     canActivate:[AuthGuardService],
     component: TodoComponent,}
-
-
 ];
 
-export const routing = RouterModule.forChild(routes);
+@NgModule({
+    imports:[RouterModule.forChild(routes)],
+    exports:[RouterModule]
+})
+
+export class TodoRoutingModule{};

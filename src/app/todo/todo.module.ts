@@ -3,7 +3,7 @@ import {HttpModule} from '@angular/http';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
-import {routing} from './todo.routes';
+import {TodoRoutingModule} from './todo-routing.module';
 import {TodoComponent} from './todo.component';
 import {TodoHeaderComponent} from './todo-header/todo-header.component';
 import {TodoFooterComponent} from './todo-footer/todo-footer.component';
@@ -18,7 +18,7 @@ import {AuthGuardService} from '../core/auth-guard.service';
         CommonModule,
         FormsModule,
         HttpModule,
-        routing
+        TodoRoutingModule
     ],
     declarations:[
         TodoComponent,
