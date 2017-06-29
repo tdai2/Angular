@@ -80,6 +80,13 @@ export class TodoService {
       .catch(this.handleError);
   }
 
+ getTodo(id:string): Promise<Todo>{
+   
+    return this.http.get(`${this.api_url}?id=${id}`)
+      .toPromise()
+      .then(res => res.json() as Todo)
+      .catch(this.handleError);
+  }
 
   private handleError(error:any) : Promise<any>{
     console.error('An error occurred', error);

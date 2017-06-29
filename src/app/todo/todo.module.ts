@@ -12,6 +12,7 @@ import {TodoService} from './todo.service';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import {AuthGuardService} from '../core/auth-guard.service';
+import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 
 @NgModule({
     imports: [
@@ -25,7 +26,8 @@ import {AuthGuardService} from '../core/auth-guard.service';
         TodoFooterComponent,
         TodoHeaderComponent,
         TodoItemComponent,
-        TodoListComponent
+        TodoListComponent,
+        TodoDetailComponent
     ],
     providers:[
         {provide: 'todoService', useClass: TodoService},

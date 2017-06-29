@@ -1,4 +1,10 @@
-import { Component, Input, Output,EventEmitter } from '@angular/core';
+
+import { Component, OnInit, Input,EventEmitter,Output } from '@angular/core';
+import {ActivatedRoute, Params} from '@angular/router';
+import {Location} from '@angular/common';
+import {TodoService} from '../todo.service';
+import {Todo} from '../../domain/entities';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-todo-item',
@@ -7,12 +13,23 @@ import { Component, Input, Output,EventEmitter } from '@angular/core';
 })
 
 
-export class TodoItemComponent {
+export class TodoItemComponent  {
   @Input() isChecked: boolean = false;
   @Input() todoDesc: string = '';
   @Output() onToggleTriggered = new EventEmitter<boolean>();
   @Output() onRemoveTriggered = new EventEmitter<boolean>();
 
+  @Input() todo:Todo
+  constructor(
+    private todoService:TodoService,
+    private route: ActivatedRoute,
+    private localtion: Location
+  ){ }
+  /*
+  gotoDetail(): void {
+    this.route.navigate(['/detail', this.selectedHero.id]);
+  }
+  */
   toggleTodo(){
     this.onToggleTriggered.emit(true);
   }

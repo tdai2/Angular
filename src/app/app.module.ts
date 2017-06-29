@@ -10,11 +10,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import {AuthService} from './core/auth.service';
 import{UserService} from './core/user.service'
+import{TodoService} from './todo/todo.service'
 //import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 
 import {TodoModule} from './todo/todo.module';
 //import {PlaygroundModule} from './playground/playground.module';
+import {TonyPlayModule} from './tony-play/tony-play.module'
+import {TonyPlay1Module} from './tony-play1/tony-play1.module'
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import {TodoModule} from './todo/todo.module';
   //  InMemoryWebApiModule.forRoot(InMemoryTodoDbService),
     AppRoutingModule,
     TodoModule,
+    TonyPlayModule,
+    TonyPlay1Module
   //  PlaygroundModule
 
 /*
@@ -47,7 +52,8 @@ import {TodoModule} from './todo/todo.module';
 
   providers: [
     {provide:'auth', useClass: AuthService},
-    {provide:'user', useClass: UserService }
+    {provide:'user', useClass: UserService },
+    {provide:TodoService, useClass: TodoService}
     ],
   bootstrap: [AppComponent]
 })

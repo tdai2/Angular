@@ -1,6 +1,7 @@
 import {Routes, RouterModule} from '@angular/router';
 import {NgModule, ModuleWithProviders} from '@angular/core';
 import {LoginComponent} from './login/login.component';
+
 //import {PlaygroundComponent}  from './playground/playground.component';
 
 //import {TodoComponent} from './todo/todo.component';
@@ -19,17 +20,22 @@ const routes : Routes = [
         path: 'login',
         component: LoginComponent 
     },
+    /*
     {
         path : '',
         redirectTo: 'todo/All',
+        pathMatch : 'full'
+    },
+    */
+    {
+        path : '',
+        redirectTo: 'playmodule',
         pathMatch : 'full'
     },
     {
         path: 'todo',
         redirectTo: 'todo/ALL'  
     },
-    
-    
     
 ];
 

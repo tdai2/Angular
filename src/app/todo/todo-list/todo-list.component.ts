@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import {Todo} from '../todo.model';
+import {Router} from '@angular/router';
+import {Todo} from '../../domain/entities';
 
 @Component({
   selector: 'app-todo-list',
@@ -18,6 +19,9 @@ k
     return this._todos;
   }
 
+ constructor(
+    private router: Router,) { }
+
   @Output() onRemoveTodo = new EventEmitter<Todo>();
   @Output() onToggleTodo = new EventEmitter<Todo>();
 
@@ -33,4 +37,6 @@ k
   onToggleAllTriggered(){
     this.onToggleAll.emit(true);
   }
+
+
 }
