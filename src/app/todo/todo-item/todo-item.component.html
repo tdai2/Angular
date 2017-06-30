@@ -1,6 +1,9 @@
 <div class = "view">
   <input class = "toggle" type = "checkbox" (click)="toggleTodo(todo)" [checked] = "isChecked">
   <li><label [class.labelcompleted]="isChecked" (click)="toggleTodo(todo)">{{todoDesc}} </label></li>
-  <li><button (click)="gotoDetail()">{{todoDesc}}</button>  </li>
+
+
+  <li><a [routerLink]="['/detail', todoID]"> {{todoDesc}}</a> </li>
+  
   <button class = "destroy" (click) = "removeTodo(); $event.stopPropagation()"></button>
 </div>

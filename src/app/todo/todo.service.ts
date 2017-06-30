@@ -81,7 +81,7 @@ export class TodoService {
   }
 
  getTodo(id:string): Promise<Todo>{
-   
+   //console.log(`${this.api_url}?id=${id}`)
     return this.http.get(`${this.api_url}?id=${id}`)
       .toPromise()
       .then(res => res.json() as Todo)

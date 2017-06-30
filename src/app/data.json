@@ -21,7 +21,7 @@
     {
       "id": "db1eabb3-5410-4c1e-7446-87ba810f9fcb",
       "desc": "test up",
-      "completed": true,
+      "completed": false,
       "userId": 1
     },
     {

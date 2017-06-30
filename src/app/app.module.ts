@@ -16,8 +16,9 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {TodoModule} from './todo/todo.module';
 //import {PlaygroundModule} from './playground/playground.module';
-import {TonyPlayModule} from './tony-play/tony-play.module'
-import {TonyPlay1Module} from './tony-play1/tony-play1.module'
+import {TonyPlayModule} from './tony-play/tony-play.module';
+import {TonyPlay1Module} from './tony-play1/tony-play1.module';
+import {TonyDataBindingModule} from "./tony-data-binding/tony-data-binding.module";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {TonyPlay1Module} from './tony-play1/tony-play1.module'
     AppRoutingModule,
     TodoModule,
     TonyPlayModule,
-    TonyPlay1Module
+    TonyPlay1Module,
+    TonyDataBindingModule
   //  PlaygroundModule
 
 /*

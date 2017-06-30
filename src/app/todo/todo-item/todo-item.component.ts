@@ -16,6 +16,7 @@ import 'rxjs/add/operator/switchMap';
 export class TodoItemComponent  {
   @Input() isChecked: boolean = false;
   @Input() todoDesc: string = '';
+  @Input() todoID : string = '';
   @Output() onToggleTriggered = new EventEmitter<boolean>();
   @Output() onRemoveTriggered = new EventEmitter<boolean>();
 
