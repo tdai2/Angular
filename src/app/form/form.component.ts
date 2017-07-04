@@ -19,11 +19,12 @@ export class FormComponent implements OnInit {
   superPowers  = ['Really Smart', 'Super Flexible','Super Hot', 'Weather Changer',"Mind control"];
   model = new Hero("1","slash",this.superPowers[0]);
   addHero(){
-    this.formService.addHero
+    console.log("in from component addHero()");
+    this.formService.addHero(this.model);
   }
-  
+  onSubmit(){}
 
-   get diagnostic() { return JSON.stringify(this.model); }
+  get diagnostic() { return JSON.stringify(this.model); }
 
 
   ngOnInit() {

@@ -20,7 +20,10 @@ export class FormService {
   constructor(private http: Http) { }
 
   addHero (hero:Hero) : Promise<Hero>{
-    //hero.id = UUID.UUID();
+    hero.id = UUID.UUID();
+    console.log("In form Service ts. addHero()");
+    console.log("hero is:");
+    console.log(hero)
     return this.http
     .post(this.api_hero_url,JSON.stringify(hero),{headers: this.headers})
     .toPromise()

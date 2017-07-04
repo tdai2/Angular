@@ -49,7 +49,7 @@
       "username": "peng"
     }
   ],
-  "superpowers":[
+  "superpowers": [
     {
       "id": "1",
       "powername": "Really smart"
@@ -67,9 +67,16 @@
       "powername": "Weather Changer"
     }
   ],
-  "heros":[
+  "heros": [
+    {
+      "name": "stack",
+      "power": "Really Smart",
+      "id": 1
+    },
+    {
+      "name": "American captain",
+      "power": "Really Smart",
+      "id": "02fdde9e-9337-3c29-4929-c735715d6061"
+    }
   ]
 }
-
-
-

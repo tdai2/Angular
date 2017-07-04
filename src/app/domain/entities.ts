@@ -17,6 +17,10 @@ export class Auth{
 }
 
 export class Hero{
+    id: string;
+    name: string;
+    power:string;
+
     constructor(
     id: string,
     name: string,
