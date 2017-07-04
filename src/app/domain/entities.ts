@@ -15,3 +15,18 @@ export class Auth{
     errMsg : string;
     redirectUrl: string;
 }
+
+export class Hero{
+    constructor(
+    id: string,
+    name: string,
+    power: string,
+    ){}
+}
+
+export class SuperPower{
+    constructor(
+    id: string,
+    powername: string,
+    ){}
+}

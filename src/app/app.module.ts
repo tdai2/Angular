@@ -19,6 +19,8 @@ import {TodoModule} from './todo/todo.module';
 import {TonyPlayModule} from './tony-play/tony-play.module';
 import {TonyPlay1Module} from './tony-play1/tony-play1.module';
 import {TonyDataBindingModule} from "./tony-data-binding/tony-data-binding.module";
+import {FormModule} from "./form/form.module";
+import {FormService} from "./form/form.service";
 
 @NgModule({
   declarations: [
@@ -34,9 +36,10 @@ import {TonyDataBindingModule} from "./tony-data-binding/tony-data-binding.modul
     TodoModule,
     TonyPlayModule,
     TonyPlay1Module,
-    TonyDataBindingModule
+    TonyDataBindingModule,
+    FormModule
   //  PlaygroundModule
-
+  
 /*
     RouterModule.forRoot([
       {
@@ -55,7 +58,8 @@ import {TonyDataBindingModule} from "./tony-data-binding/tony-data-binding.modul
   providers: [
     {provide:'auth', useClass: AuthService},
     {provide:'user', useClass: UserService },
-    {provide:TodoService, useClass: TodoService}
+    {provide:TodoService, useClass: TodoService},
+    {provide:FormService, useClass:FormService},
     ],
   bootstrap: [AppComponent]
 })

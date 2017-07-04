@@ -48,5 +48,28 @@
       "password": "5678",
       "username": "peng"
     }
+  ],
+  "superpowers":[
+    {
+      "id": "1",
+      "powername": "Really smart"
+    },
+    {
+      "id": "2",
+      "powername": "Super Flexible"
+    },
+    {
+      "id": "3",
+      "powername": "Super Hot"
+    },
+    {
+      "id": "4",
+      "powername": "Weather Changer"
+    }
+  ],
+  "heros":[
   ]
 }
+
+
+
