@@ -17,20 +17,18 @@ export class Auth{
 }
 
 export class Hero{
-    id: string;
-    name: string;
-    power:string;
+    
 
     constructor(
-    id: string,
-    name: string,
-    power: string,
+    private id: string,
+    private name: string,
+    private power: string,
     ){}
 }
 
 export class SuperPower{
     constructor(
-    id: string,
-    powername: string,
+    private id: string,
+    private powername: string,
     ){}
 }

@@ -77,6 +77,21 @@
       "name": "American captain",
       "power": "Really Smart",
       "id": "02fdde9e-9337-3c29-4929-c735715d6061"
+    },
+    {
+      "name": "Eagle eye",
+      "power": "Super Flexible",
+      "id": "2267f08e-cac4-aed0-e145-96d66fdf160a"
+    },
+    {
+      "id": "93b80efb-f0b8-2a7b-34a7-15fe68c59aee",
+      "name": "Hulk",
+      "power": "Super Flexible"
+    },
+    {
+      "id": "3567b564-03e8-94d0-c3e6-919c0f08552d",
+      "name": "Hulk",
+      "power": "Super Flexible"
     }
   ]
 }
